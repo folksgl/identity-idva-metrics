@@ -1,5 +1,5 @@
 ---
-name: Deploy
+name: Deploy Redis
 
 on:
   push:
@@ -7,8 +7,9 @@ on:
       - main
     tags:
       - '*'
-    paths-ignore:
-      - '**.md'  # All markdown files in the repository
+    paths:
+      - 'redis/**'
+      - '.github/workflows/deploy-redis.yaml'
   release:
     types: [released]
 
